@@ -1,3 +1,3 @@
-import Providers from "./index.component";
+import Providers from "./index.components";
 
 export default Providers;

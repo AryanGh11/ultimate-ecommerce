@@ -1,7 +1,7 @@
 import Providers from "../providers";
-import AuthCardFooterButton from "./components/footer-button";
+import AuthCardPrimaryButton from "./components/primary-button";
 
-import { AuthCardFooterButtonProps } from "./components/footer-button";
+import { AuthCardPrimaryButtonProps } from "./components/primary-button";
 
 import {
   Card,
@@ -14,14 +14,14 @@ import {
 interface AuthCardProps {
   children: React.ReactNode;
   title: string;
-  footerButton: AuthCardFooterButtonProps;
+  primaryButton: AuthCardPrimaryButtonProps;
   showProviders: boolean;
 }
 
 export default function AuthCard({
   children,
   title,
-  footerButton,
+  primaryButton,
   showProviders,
 }: AuthCardProps) {
   return (
@@ -35,9 +35,9 @@ export default function AuthCard({
           </CardFooter>
         )}
         <CardFooter>
-          <AuthCardFooterButton
-            label={footerButton.label}
-            href={footerButton.href}
+          <AuthCardPrimaryButton
+            label={primaryButton.label}
+            href={primaryButton.href}
           />
         </CardFooter>
       </CardHeader>
